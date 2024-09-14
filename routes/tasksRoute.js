@@ -63,7 +63,7 @@ router.delete('/:id', async (request, response) => {
 
   const task = await Task.findByIdAndDelete({_id: id})
 
-  if(!taskt) {
+  if(!task) {
     return res.status(400).json({error: 'No such task'})
   }
 
